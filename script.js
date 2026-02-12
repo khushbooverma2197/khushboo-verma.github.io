@@ -320,13 +320,6 @@ const debouncedScroll = debounce(() => {
 window.addEventListener('scroll', debouncedScroll);
 
 // ===== Page Load Animation =====
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
     document.body.classList.add('loaded');
-    
-    // Sections are visible by default now
-    // Optional: Add fade-in animation class if needed
-    const sections = document.querySelectorAll('section');
-    sections.forEach((section, index) => {
-        section.style.animation = `fadeInUp 0.6s ease-out ${index * 0.1}s both`;
-    });
 });
